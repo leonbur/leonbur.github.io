@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Leon's Think Box</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;display=swap" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /><style>
+<!DOCTYPE html><html><head><title>Leon's Think Box</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;display=swap" /><link rel="icon" type="image/svg+xml" href="./logo.svg" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /><style>
     :root {
       --desert-night: #1A1816;
       --papyrus-dark: #2C2824;
@@ -25,41 +25,62 @@
       border: 1px solid var(--gold-dark);
       border-radius: 4px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
     
-    .logo-container {
+    .site-brand {
       display: flex;
       align-items: center;
+      gap: 0.75rem;
+      color: var(--gold-dark);
+      text-decoration: none;
+      border-bottom: none;
+    }
+    
+    .site-brand:hover {
+      color: #DAA520;
+      border-bottom: none;
+    }
+    
+    .site-title {
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
     
     .logo {
       width: 40px;
       height: 40px;
-      // margin-right: 0rem;
-      // transition: transform 0.3s ease;
     }
     
     .logo:hover {
       transform: scale(1.1);
     }
     
-    .nav a {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-links a {
       color: var(--text-light);
       text-decoration: none;
       padding: 0.5rem 1rem;
       border-radius: 4px;
+      border-bottom: none;
       transition: all 0.2s ease;
     }
     
-    .nav a:hover {
+    .nav-links a:hover {
       background: var(--sand-dark);
       color: var(--gold-dark);
+      border-bottom: none;
     }
     
-    .nav a.active {
+    .nav-links a.active {
       background: var(--sand-dark);
       color: var(--gold-dark);
       border: 1px solid var(--gold-dark);
@@ -259,4 +280,4 @@
       width: 24px;
       height: 24px;
     }
-  </style></head><body><div class="nav"><div class="logo-container"><a href="./"><img src="./logo.svg" alt="Think Box Logo" class="logo" /></a></div><a href="./" class="active"><span>Blog</span></a><a href="./projects.html" class=""><span>Projects</span></a><a href="./about.html" class=""><span>About</span></a></div><div class="container"><h1>Leon's Think Box</h1><ul><li><a href="Minimalism vs. Intentionality.html">Minimalism vs. Intentionality</a><span> - 2026-09-13</span></li></ul><div style="text-align: center"><a href="/feed.xml" class="rss-link" title="Subscribe via RSS"><img src="./rss.svg" alt="RSS Feed" /></a></div></div></body></html>
+  </style></head><body><div class="nav"><a href="./" class="site-brand"><img src="./logo.svg" alt="Think Box Logo" class="logo" /><span class="site-title">Leon's Think Box</span></a><div class="nav-links"><a href="./" class="active"><span>Blog</span></a><a href="./projects.html" class=""><span>Projects</span></a><a href="./about.html" class=""><span>About</span></a></div></div><div class="container"><h1>Blog</h1><ul><li><a href="Minimalism vs. Intentionality.html">Minimalism vs. Intentionality</a><span> - 2026-09-13</span></li></ul><div style="text-align: center"><a href="/feed.xml" class="rss-link" title="Subscribe via RSS"><img src="./rss.svg" alt="RSS Feed" /></a></div></div></body></html>
