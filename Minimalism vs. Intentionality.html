@@ -1,0 +1,273 @@
+<!DOCTYPE html><html><head><title>Minimalism vs. Intentionality</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;display=swap" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /><style>
+    :root {
+      --desert-night: #1A1816;
+      --papyrus-dark: #2C2824;
+      --sand-dark: #443F36;
+      --gold-dark: #B8860B;
+      --nile-dark: #1F4E5F;
+      --text-light: #E6D5B8;
+    }
+    
+    body {
+      background-color: var(--desert-night);
+      color: var(--text-light);
+      font-family: 'Noto Serif', Georgia, serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+    
+    .nav {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      padding: 1rem;
+      background: var(--papyrus-dark);
+      border: 1px solid var(--gold-dark);
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 40px;
+      height: 40px;
+      // margin-right: 0rem;
+      // transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.1);
+    }
+    
+    .nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    
+    .nav a:hover {
+      background: var(--sand-dark);
+      color: var(--gold-dark);
+    }
+    
+    .nav a.active {
+      background: var(--sand-dark);
+      color: var(--gold-dark);
+      border: 1px solid var(--gold-dark);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--papyrus-dark);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 1px solid var(--gold-dark);
+      border-radius: 4px;
+      position: relative;
+    }
+    
+    .container::before,
+    .container::after {
+      content: &quot;☥&quot;;
+      position: absolute;
+      font-size: 1.5rem;
+      color: var(--gold-dark);
+      opacity: 0.6;
+    }
+    
+    .container::before {
+      top: 1rem;
+      left: 1rem;
+    }
+    
+    .container::after {
+      bottom: 1rem;
+      right: 1rem;
+    }
+    
+    h1 {
+      color: var(--gold-dark);
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: normal;
+      border-bottom: double 3px var(--gold-dark);
+      padding-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    
+    .metadata {
+      background: var(--sand-dark);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      border-left: 2px solid var(--gold-dark);
+      color: var(--text-light);
+      opacity: 0.9;
+    }
+    
+    .content {
+      line-height: 1.7;
+      background: var(--sand-dark);
+      padding: 2rem;
+      border-radius: 4px;
+      border: 1px solid rgba(184, 134, 11, 0.2);
+    }
+    
+    a {
+      color: var(--gold-dark);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    
+    a:hover {
+      color: #DAA520;
+      border-bottom: 1px solid currentColor;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    li {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: var(--sand-dark);
+      border-left: 2px solid var(--gold-dark);
+      transition: border-width 0.2s ease;
+    }
+    
+    li:hover {
+      border-left-width: 4px;
+    }
+    
+    code {
+      background: var(--desert-night);
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: #E6D5B8;
+    }
+    
+    pre code {
+      display: block;
+      padding: 1rem;
+      overflow-x: auto;
+      border: 1px solid rgba(184, 134, 11, 0.2);
+    }
+
+    ::selection {
+      background: var(--gold-dark);
+      color: var(--desert-night);
+    }
+
+    .rss-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: transform 0.2s ease;
+    }
+
+    .rss-link:hover {
+      transform: scale(1.1);
+    }
+
+    .rss-link img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .project-card {
+      background: var(--sand-dark);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(184, 134, 11, 0.2);
+    }
+    
+    .project-title {
+      color: var(--gold-dark);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .project-description {
+      margin-bottom: 1rem;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .project-tech {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .tech-icon {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+    
+    .tech-icon:hover {
+      opacity: 1;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--sand-dark);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-2px);
+      background: var(--gold-dark);
+      color: var(--desert-night);
+    }
+    
+    .social-icon {
+      width: 24px;
+      height: 24px;
+    }
+  </style></head><body><div class="nav"><div class="logo-container"><a href="./"><img src="./logo.svg" alt="Think Box Logo" class="logo" /></a></div><a href="./" class="active"><span>Blog</span></a><a href="./projects.html" class=""><span>Projects</span></a><a href="./about.html" class=""><span>About</span></a></div><div class="container"><h1>Minimalism vs. Intentionality</h1><div class="metadata"><p>Posted on 2026-09-13<br />Tags: minimalism</p></div><div class="content"><p>Not long ago, I fell into the minimalism trend. Little by little I got hooked on various social media posts related to minimalism. It all started with my desire to becoming free from clutter (which I believed I had a fair amount of) and thus, I adopted the minimalist aesthetic. Naturally, walls had to be bare white and featureless. Obsessively get rid of stuff because I only needed the essentials. 20 shirts? I can do with 7. I’ll just match them with different pants every time. In retrospect, some of it was silly but it did get me on the right track in several key areas: my work environment needed to be clear of stuff for me to be able to concentrate on my tasks. Various toys and mementos were a distraction.</p>
+<p>The other thing is Intentionality. Every time I was passing a toy or item that I found cool or interesting, Intentionality got me to stop and think where I would put it, and by doing that analysis, my enthusiasm for that object faded and I moved on. When starting out your minimalism journey, this kind of mentality is very helpful. This is the kind of habit that helps prevent hoarding and buying unnecessary stuff that eventually becomes clutter. With time though, I started rejecting things, even good things that might potentially become a hobby (such as a guitar) from entering my home solely based on their aesthetic and how it will look in my home and how much maintenance I’ll have to do for another item, so I gave up on them.</p>
+<p>My view shifted when I happened to visit the home of an acquaintance that had a lot of art and home-y décor. His home looked very lived-in but didn’t give the impression that it’s a hoarder’s nest. It felt like everything had a story. I asked about the art on display and he told me where he got some of it, who painted some of the pieces and what relationship he had with that person. It felt very personal to him. I asked how can he like some of the obviously kitschy ones he had because it looked totally out of place for him. Instead of answering, he asked what I thought about them. Since it wasn’t my cup of tea, I said I dislike most of them, they were either ugly to look at or were just evoking negativity. He said that if I have any kind of emotion to it – it’s art. And he liked art for art’s sake. If it didn’t evoke any kind of emotional response then it was meaningless to him.</p>
+<p>I returned home, looked at my harsh white walls under the cold white overhead light and felt like I made a mistake somewhere. I used to have a mild anxiety that if I brought stuff in, they would need dusting otherwise it looked unsightly, and I would be a slave to my own belongings to maintaining everything clean. But after coming home that night, I thought my house looked sterile. I should be able to maintain the stuff I would find pleasing.</p>
+<p>My first art purchase was a picture I saw on Reddit. I saw the picture, thought it was nice and scrolled on.</p>
+<p>Then I scrolled back. It wasn’t perfect. But it made me look at it for a while. While staring at it I started getting a little excited by the wild notion of actually buying it. Eventually, I decided to get a limited print (which cost quite a pretty penny for a print). I couldn’t believe I actually bought a work of art! When it arrived I got it framed and hung it proudly in the living room.</p>
+<p>Since that day, I’m keeping an eye for art that will bring me the same excitement, no luck yet though.</p>
+<p>In the end, I realized I didn’t want to live as a soulless blank canvas of efficiency. The human essence doesn’t need to be optimized. Sometimes it just needs a nudge in the right direction. Intentionality is there to right the ship on what’s good for me to have and what isn’t. I don’t want to live with nothing. Some things may enter my home even though they might seem like clutter and a chore to maintain, as long as they bring me joy.<br />
+Also, white walls are bad. It’s characterless and unpleasant. On YouTube, interior designers that made homes white, made them look very cold and uninviting, but I was so deeply brainwashed that I glanced this over because I thought that this is the correct way to avoid getting distracted – I made my work room white, with white cabinets, a white table, white laptop, and a white keyboard. Even my phone was white.<br />
+Now I understand that this was wrong. Color brings joy, even when currently focusing on work.</p>
+<p>When you think about it, minimalism is a kind of extreme, and any extremism is bad. Losing sight of that and subscribing to making my home follow some social media trend du-jour was utter stupidity.</p>
+</div><div style="text-align: center"><a href="/feed.xml" class="rss-link" title="Subscribe via RSS"><img src="./rss.svg" alt="RSS Feed" /></a></div></div></body></html>
